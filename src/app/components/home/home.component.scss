@@ -1,0 +1,17 @@
+.reader {
+    background-color: rgb(240, 240, 240);
+
+    .document {
+        height: 96vh;
+    }
+
+    .book {
+        background-color: white;
+
+        margin: 5vh 22vw;
+        margin-bottom: 5vh;
+        text-align: justify;
+        padding: 1vh 2.5vw;
+        line-height: 2;
+    }
+}
