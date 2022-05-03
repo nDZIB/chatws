@@ -1,7 +1,14 @@
-<div>
-    {{thumbnails}}
-    {{title}}
-    {{subt}}
+<div class="card">
+    <div class="thumbs">
+        <img class="thumbnail" src="{{thumb}}" alt="thumb" *ngFor="let thumb of thumbnails">
+    </div>
+    <div class="content">
+        <h5 class="content__title">{{title}}</h5>
+        <p>{{subt}}</p>
+    </div>
+
+    <div class="extras">
+        <ng-content>
+        </ng-content>
+    </div>
 </div>
-<ng-content>
-</ng-content>

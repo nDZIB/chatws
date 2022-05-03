@@ -1,6 +1,6 @@
 <div class="workspace">
     <div class="workspace__chats">
-        <div>
+        <div class="chats-header">
             <h3>Chats</h3>
 
             <div>
@@ -13,20 +13,32 @@
             </div>
         </div>
 
-        <div>
+        <div class="filters">
             <app-chip [active]="true" value="Open"></app-chip>
             <app-chip [active]="true" value="Done"></app-chip>
             <app-chip value="Unread"></app-chip>
         </div>
 
-        <div>
-            <app-card1 [thumbnails]="['/assets/images/user.jpeg']" extras="12m" subt="You: UX Consulting" title="Leslie Laurens"></app-card1>
-            <app-card1 [active]="true" extras="3h" subt="You: UX Consulting" title="Scouting Group"></app-card1>
-            <app-card1 extras="4h" subt="Laura: We need UI Designer" title="Leslie Palmier"></app-card1>
+        <div class="recent-chats">
+            <app-card1 [thumbnails]="['/assets/images/user.jpeg', '/assets/images/indira.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
+                <span>
+                    12m
+                </span>
+            </app-card1>
+            <app-card1 [active]="true" subt="You: UX Consulting" title="Scouting Group">
+                <span>
+                    3h
+                </span>
+            </app-card1>
+            <app-card1 [thumbnails]="['/assets/images/divina.webp']" subt="Laura: We need UI Designer" title="Leslie Palmier">
+                <span>
+                    4h
+                </span>
+            </app-card1>
         </div>
 
-        <div>
-            <app-icon name="icon-chart"></app-icon>
+        <div class="report">
+            <app-icon name="icon-chart"></app-icon> &nbsp;
             <span>Submit Feedback</span>
         </div>
     </div>
@@ -34,9 +46,11 @@
     <div class="workspace__area">
         <h2>Scouting Group</h2>
         <div>
-            <app-hint [important]="true" title="Welcome to the Streamline scouting chat" content="We can now freely collaborate regarding our current Demand. Any questions about the documentation or the project, please feel free to get in touch with us."></app-hint>
+            <app-hint [important]="true" title="Welcome to the Streamline scouting chat"
+                content="We can now freely collaborate regarding our current Demand. Any questions about the documentation or the project, please feel free to get in touch with us.">
+            </app-hint>
         </div>
-        
+
         <p>
             Tuesday May 2nd 2022
         </p>
@@ -64,10 +78,14 @@
 
         <div>
             <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
-                <button><app-icon name="icon-conversation"></app-icon></button>
+                <button>
+                    <app-icon name="icon-conversation"></app-icon>
+                </button>
             </app-card1>
             <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
-                <button><app-icon name="icon-conversation"></app-icon></button>
+                <button>
+                    <app-icon name="icon-conversation"></app-icon>
+                </button>
             </app-card1>
         </div>
 
@@ -75,10 +93,14 @@
 
         <div>
             <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
-                <button><app-icon name="icon-conversation"></app-icon></button>
+                <button>
+                    <app-icon name="icon-conversation"></app-icon>
+                </button>
             </app-card1>
             <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
-                <button><app-icon name="icon-conversation"></app-icon></button>
+                <button>
+                    <app-icon name="icon-conversation"></app-icon>
+                </button>
             </app-card1>
         </div>
 

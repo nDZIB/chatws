@@ -6,7 +6,34 @@
     &__chats {
         grid-row: 1/-1;
         grid-column: 1 / 4;
-        background-color: white;
+        padding: 1.1rem 1.1rem;
+        position: relative;
+
+        .chats-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .filters {
+            margin-top: 3rem;
+            & > :not(:last-child) {
+                margin-right: .8rem;
+            }
+        }
+
+        .recent-chats {
+            margin-top: 2rem;
+        }
+
+        .report {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 3%;
+            justify-content: center;
+            width: 100%;
+        }
     }
 
     &__area {

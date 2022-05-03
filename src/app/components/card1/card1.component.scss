@@ -1,0 +1,39 @@
+.thumbs {
+    display: grid;
+    grid-template-rows: 5rem;
+    grid-template-columns: repeat(2, minmax(2rem, 1fr));
+    overflow: hidden;
+    border-radius: 500000rem;
+
+    background-color: lightblue;
+
+    .thumbnail {
+        max-height: 3rem;
+        max-width: 3rem;
+        border-radius: 20%;
+    }
+}
+
+.card {
+    display: grid;
+    grid-template-columns: .3fr 1fr .3fr;
+    max-height: 5rem;
+    margin-bottom: .5rem;
+
+    .extras {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+
+        &__title {
+            margin-bottom: .2rem;
+        }
+    }
+}
