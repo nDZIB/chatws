@@ -41,9 +41,11 @@
         position: relative;
 
         .compose-message {
+            z-index: 100;
+            background-color: inherit;
             width: 100%;
             position: absolute;
-            bottom: 0;
+            bottom: 2%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -68,5 +70,30 @@
     &__tools {
         grid-column: 16/-1;
         background-color: white;
+        
+        padding: 0 1.5rem;
+
+        .tabs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            & > * {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 5rem;
+            }
+        }
+
+        .participants {
+            margin-top: 1rem;
+            margin-bottom: 4rem;
+
+            .members, .admins {
+                & > :not(:last-child) {
+                    margin-bottom: 7rem;
+                }
+            }
+        }
     }
 }

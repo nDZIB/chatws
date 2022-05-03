@@ -79,43 +79,46 @@
     </div>
 
     <aside class="workspace__tools">
-        <div>
-            <a href="#">Chat Members</a>
-            <a href="#">Shared Files</a>
+        <div class="tabs">
+            <a class="button" href="#">Chat Members</a>
+            <a class="button" href="#">Shared Files</a>
         </div>
 
-        <h5>{{'members' | uppercase}}</h5>
+        <div class="participants">
+            <h5>{{'members' | uppercase}}</h5>
 
-        <div>
-            <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
-                <button>
-                    <app-icon name="icon-conversation"></app-icon>
-                </button>
-            </app-card1>
-            <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
-                <button>
-                    <app-icon name="icon-conversation"></app-icon>
-                </button>
-            </app-card1>
-        </div>
+            <div class="members">
+                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
+                    <button>
+                        <app-icon name="icon-conversation"></app-icon>
+                    </button>
+                </app-card1>
+                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
+                    <button>
+                        <app-icon name="icon-conversation"></app-icon>
+                    </button>
+                </app-card1>
+            </div>
 
-        <h5>{{'members' | uppercase}}</h5>
+            <h5>{{'members' | uppercase}}</h5>
 
-        <div>
-            <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
-                <button>
-                    <app-icon name="icon-conversation"></app-icon>
-                </button>
-            </app-card1>
-            <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
-                <button>
-                    <app-icon name="icon-conversation"></app-icon>
-                </button>
-            </app-card1>
+            <div class="admins">
+                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
+                    <button>
+                        <app-icon name="icon-conversation"></app-icon>
+                    </button>
+                </app-card1>
+                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
+                    <button>
+                        <app-icon name="icon-conversation"></app-icon>
+                    </button>
+                </app-card1>
+            </div>
         </div>
 
         <div>
             <app-hint title="Customize Chat" content="Change layout and colors"></app-hint>
+            <br>
             <app-hint title="Privacy Settings" content="Get immediate support"></app-hint>
         </div>
     </aside>

@@ -6,6 +6,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    display: none;
 }
 
 .app {
@@ -13,7 +14,7 @@
     overflow-y: scroll;
     display: grid;
 
-    grid-template-rows: min-content 90vh;
+    grid-template-rows: min-content 94vh;
     grid-template-columns: 4vw [side-bar-end main-start] 1fr repeat(16, [col-start] minmax(min-content, 1fr) [col-end]) 1fr;
 
     &__header {
