@@ -1,4 +1,6 @@
-<div>
-    <img src="/assets/images/user.jpeg" alt="user">
-    Awesome! I will be coming over to verify shortly
+<div [ngClass]="{'float-right': byMe}" class="message">
+    <img class="sender" src="{{sender}}" alt="user">
+    <p class="content">
+        {{content}}
+    </p>
 </div>

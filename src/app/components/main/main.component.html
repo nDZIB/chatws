@@ -20,7 +20,8 @@
         </div>
 
         <div class="recent-chats">
-            <app-card1 [thumbnails]="['/assets/images/user.jpeg', '/assets/images/indira.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
+            <app-card1 [thumbnails]="['/assets/images/user.jpeg', '/assets/images/indira.jpeg']"
+                subt="You: UX Consulting" title="Leslie Laurens">
                 <span>
                     12m
                 </span>
@@ -30,7 +31,8 @@
                     3h
                 </span>
             </app-card1>
-            <app-card1 [thumbnails]="['/assets/images/divina.webp']" subt="Laura: We need UI Designer" title="Leslie Palmier">
+            <app-card1 [thumbnails]="['/assets/images/divina.webp']" subt="Laura: We need UI Designer"
+                title="Leslie Palmier">
                 <span>
                     4h
                 </span>
@@ -56,15 +58,23 @@
         </p>
 
         <div>
-            <app-message></app-message>
-            <app-message></app-message>
-            <app-message></app-message>
+            <app-message content="What are words that we cannot use them" sender="/assets/images/indira.jpeg">
+            </app-message>
+            <app-message sender="/assets/images/divina.webp" [byMe]="true" content="Hello everyone"></app-message>
+            <app-message sender="/assets/images/user.jpeg" content="How are you today?"></app-message>
         </div>
 
-        <form action="#">
-            <app-icon name="icon-attachment"></app-icon>
-            <input type="text">
-            <app-icon name="icon-location-current"></app-icon>
+        <form class="compose-message" action="#">
+
+            <button class="button attach" type="button">
+                <app-icon name="icon-attachment"></app-icon>
+            </button>
+
+            <textarea class="text-input" type="text"></textarea>
+
+            <button class="button send" type="submit">
+                <app-icon name="icon-location-current"></app-icon>
+            </button>
         </form>
     </div>
 

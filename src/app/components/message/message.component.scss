@@ -1,0 +1,26 @@
+.message {
+    display: flex;
+
+    .sender {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        align-self: flex-start;
+    }
+
+    .content {
+        padding: 1rem;
+        border-radius: 2rem;
+    }
+}
+
+.float-right {
+    justify-content: flex-end;
+
+    .content {
+        order: 0;
+    }
+    .sender {
+        order: 1;
+    }
+}

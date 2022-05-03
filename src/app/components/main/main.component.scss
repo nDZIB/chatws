@@ -38,6 +38,31 @@
 
     &__area {
         grid-column: 4/16;
+        position: relative;
+
+        .compose-message {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .text-input {
+                flex: 90%;
+                border-radius: 20rem;
+                resize: none;
+                height: 6rem;
+                padding: 1.5rem 3rem;
+            }
+
+            & > :not(.text-input) {
+                flex: 5%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
     }
 
     &__tools {
