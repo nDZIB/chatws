@@ -1,0 +1,90 @@
+<div class="workspace">
+    <div class="workspace__chats">
+        <div>
+            <h3>Chats</h3>
+
+            <div>
+                <button class="button">
+                    <app-icon name="icon-search"></app-icon>
+                </button>
+                <button class="button">
+                    <app-icon name="icon-add-solid"></app-icon>
+                </button>
+            </div>
+        </div>
+
+        <div>
+            <app-chip [active]="true" value="Open"></app-chip>
+            <app-chip [active]="true" value="Done"></app-chip>
+            <app-chip value="Unread"></app-chip>
+        </div>
+
+        <div>
+            <app-card1 [thumbnails]="['/assets/images/user.jpeg']" extras="12m" subt="You: UX Consulting" title="Leslie Laurens"></app-card1>
+            <app-card1 [active]="true" extras="3h" subt="You: UX Consulting" title="Scouting Group"></app-card1>
+            <app-card1 extras="4h" subt="Laura: We need UI Designer" title="Leslie Palmier"></app-card1>
+        </div>
+
+        <div>
+            <app-icon name="icon-chart"></app-icon>
+            <span>Submit Feedback</span>
+        </div>
+    </div>
+
+    <div class="workspace__area">
+        <h2>Scouting Group</h2>
+        <div>
+            <app-hint [important]="true" title="Welcome to the Streamline scouting chat" content="We can now freely collaborate regarding our current Demand. Any questions about the documentation or the project, please feel free to get in touch with us."></app-hint>
+        </div>
+        
+        <p>
+            Tuesday May 2nd 2022
+        </p>
+
+        <div>
+            <app-message></app-message>
+            <app-message></app-message>
+            <app-message></app-message>
+        </div>
+
+        <form action="#">
+            <app-icon name="icon-attachment"></app-icon>
+            <input type="text">
+            <app-icon name="icon-location-current"></app-icon>
+        </form>
+    </div>
+
+    <aside class="workspace__tools">
+        <div>
+            <a href="#">Chat Members</a>
+            <a href="#">Shared Files</a>
+        </div>
+
+        <h5>{{'members' | uppercase}}</h5>
+
+        <div>
+            <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
+                <button><app-icon name="icon-conversation"></app-icon></button>
+            </app-card1>
+            <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
+                <button><app-icon name="icon-conversation"></app-icon></button>
+            </app-card1>
+        </div>
+
+        <h5>{{'members' | uppercase}}</h5>
+
+        <div>
+            <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
+                <button><app-icon name="icon-conversation"></app-icon></button>
+            </app-card1>
+            <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
+                <button><app-icon name="icon-conversation"></app-icon></button>
+            </app-card1>
+        </div>
+
+        <div>
+            <app-hint title="Customize Chat" content="Change layout and colors"></app-hint>
+            <app-hint title="Privacy Settings" content="Get immediate support"></app-hint>
+        </div>
+    </aside>
+</div>

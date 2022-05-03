@@ -1,0 +1,20 @@
+.workspace {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    min-height: 100%;
+
+    &__chats {
+        grid-row: 1/-1;
+        grid-column: 1 / 4;
+        background-color: white;
+    }
+
+    &__area {
+        grid-column: 4/16;
+    }
+
+    &__tools {
+        grid-column: 16/-1;
+        background-color: white;
+    }
+}
