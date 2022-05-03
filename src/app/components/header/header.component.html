@@ -1,12 +1,22 @@
-<app-icon name="icon-chat-bubble-dots"></app-icon>
-Messaging
+<div class="header">
+    <div class="header__title">
+        <app-icon name="icon-chat-bubble-dots"></app-icon>
+        <span class="app-name">ChatWS</span>
+    </div>
 
-<input type="search">
-<app-icon name="icon-search"></app-icon>
+    <div class="header__actions">
+        <div class="header__search">
+            <input placeholder="Search" class="input-field" type="search">
+            <button class="button search-button">
+                <app-icon name="icon-search"></app-icon>
+            </button>
+        </div>
 
-<app-icon name="icon-notifications-outline"></app-icon>
-<span>1</span>
+        <div class="header__notifications">
+            <app-icon name="icon-notifications-outline"></app-icon>
+            <span class="notification-count">4</span>
+        </div>
 
-<div>
-    <img src="/assets/images/user.jpeg" alt="user">
+        <img class="header__avatar" src="/assets/images/user.jpeg" alt="user">
+    </div>
 </div>

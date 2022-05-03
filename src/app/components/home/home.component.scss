@@ -1,7 +1,8 @@
 @import "src/app/_partials/variables.scss";
 
 .image {
-    width: 90rem;
+    height: 40rem;
+    width: 80rem;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -9,12 +10,10 @@
 
 .app {
     height: 100vh;
-    overflow: hidden;
     overflow-y: scroll;
     display: grid;
-    grid-auto-rows: 20rem;
 
-    grid-template-rows: 1fr 90vh;
+    grid-template-rows: min-content 90vh;
     grid-template-columns: 4vw [side-bar-end main-start] 1fr repeat(16, [col-start] minmax(min-content, 1fr) [col-end]) 1fr;
 
     &__header {
