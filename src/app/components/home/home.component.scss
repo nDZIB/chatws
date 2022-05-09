@@ -1,4 +1,5 @@
 @import "src/app/_partials/variables.scss";
+@import "src/app/_partials/components.scss";
 
 .image {
     height: 40rem;
@@ -18,18 +19,18 @@
     grid-template-columns: 4vw [side-bar-end main-start] 1fr repeat(16, [col-start] minmax(min-content, 1fr) [col-end]) 1fr;
 
     &__header {
-        background-color: $col-gray-shade-1;
+        background-color: $col-white;
         grid-column: side-bar-end / -1;
     }
 
     &__sidebar {
-        background-color: $col-secondary;
+        background-color: $col-primary;
         grid-column: 1 / side-bar-end;
         grid-row: 1 / -1;
     }
 
     &__main {
-        background-color: $col-primary;
+        background-color: $col-light-shade-1;
         grid-column: side-bar-end / -1;
     }
 }
