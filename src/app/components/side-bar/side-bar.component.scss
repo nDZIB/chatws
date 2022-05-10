@@ -1,3 +1,6 @@
+@import "src/app/_partials/variables.scss";
+@import "src/app/_partials/components.scss";
+
 .sidebar {
     height: 100%;
     display: flex;
@@ -5,6 +8,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
+
+    color: white;
+    background-color: $col-primary;
 
     & > .button {
         width: 100%;

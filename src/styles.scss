@@ -10,15 +10,30 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    font-size: 1.3rem;
+}
+
 .button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    padding: .5rem .7rem;
-    cursor: pointer;
+    &, 
+    &:active, 
+    &:link,
+    &:visited {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: .5rem .7rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+    }
 
     &:hover {
         background-color: rgba(255, 255, 255, .5);
+    }
+
+    &--rounded {
+        border-radius: 5000rem;
     }
 }
 
@@ -29,4 +44,10 @@ html {
     outline: none;
     border: 1px solid rgba(230, 230, 230, .9);
     border-radius: 50000px;
+}
+
+.pointable {
+    &:hover {
+        cursor: pointer;
+    }
 }

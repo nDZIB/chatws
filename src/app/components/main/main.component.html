@@ -4,7 +4,7 @@
             <h3>Chats</h3>
 
             <div>
-                <button class="button">
+                <button *ngIf="false" class="button">
                     <app-icon name="icon-search"></app-icon>
                 </button>
                 <button class="button">
@@ -12,6 +12,8 @@
                 </button>
             </div>
         </div>
+
+        <hr style="border-color: white">
 
         <div class="filters">
             <app-chip [active]="true" value="Open"></app-chip>
@@ -22,18 +24,18 @@
         <div class="recent-chats">
             <app-card1 [thumbnails]="['/assets/images/user.jpeg', '/assets/images/indira.jpeg']"
                 subt="You: UX Consulting" title="Leslie Laurens">
-                <span>
+                <span class="chat-activity">
                     12m
                 </span>
             </app-card1>
             <app-card1 [active]="true" subt="You: UX Consulting" title="Scouting Group">
-                <span>
+                <span class="chat-activity">
                     3h
                 </span>
             </app-card1>
             <app-card1 [thumbnails]="['/assets/images/divina.webp']" subt="Laura: We need UI Designer"
                 title="Leslie Palmier">
-                <span>
+                <span class="chat-activity">
                     4h
                 </span>
             </app-card1>
@@ -58,8 +60,10 @@
         </p>
 
         <div>
-            <app-message content="What are words that we cannot use them" sender="/assets/images/indira.jpeg">
+            <app-message content="What are words that we cannot use them. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur asperiores, a odio ducimus possimus explicabo repellendus sequi dolore. Fugiat id cupiditate corporis similique ex dolorem unde molestiae rem consequuntur facere!" sender="/assets/images/indira.jpeg">
             </app-message>
+
+            
             <app-message sender="/assets/images/divina.webp" [byMe]="true" content="Hello everyone"></app-message>
             <app-message sender="/assets/images/user.jpeg" content="How are you today?"></app-message>
         </div>
@@ -80,21 +84,21 @@
 
     <aside class="workspace__tools">
         <div class="tabs">
-            <a class="button" href="#">Chat Members</a>
-            <a class="button" href="#">Shared Files</a>
+            <a class="button tab" href="#">Chat Members</a>
+            <a class="button tab" href="#">Shared Files</a>
         </div>
 
         <div class="participants">
             <h5>{{'members' | uppercase}}</h5>
 
             <div class="members">
-                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
-                    <button>
+                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="les.laura#5145" title="Leslie Laurens">
+                    <button class="button button--rounded">
                         <app-icon name="icon-conversation"></app-icon>
                     </button>
                 </app-card1>
-                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
-                    <button>
+                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="les.laura#56458" title="Leslie Laurens">
+                    <button class="button button--rounded">
                         <app-icon name="icon-conversation"></app-icon>
                     </button>
                 </app-card1>
@@ -103,13 +107,13 @@
             <h5>{{'members' | uppercase}}</h5>
 
             <div class="admins">
-                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
-                    <button>
+                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="les.laura#564890" title="Leslie Laurens">
+                    <button class="button button--rounded">
                         <app-icon name="icon-conversation"></app-icon>
                     </button>
                 </app-card1>
-                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="You: UX Consulting" title="Leslie Laurens">
-                    <button>
+                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="les.laura#5646" title="Leslie Laurens">
+                    <button class="button button--rounded">
                         <app-icon name="icon-conversation"></app-icon>
                     </button>
                 </app-card1>

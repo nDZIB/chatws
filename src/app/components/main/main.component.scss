@@ -6,12 +6,13 @@
     grid-template-columns: repeat(18, 1fr);
     min-height: 100%;
 
+    background-color: lighten($col-secondary, 20);
+
     &__chats {
         grid-row: 1/-1;
         grid-column: 1 / 4;
         padding: 1.1rem 1.1rem;
         position: relative;
-        background-color: $col-secondary;
 
         .chats-header {
             display: flex;
@@ -20,7 +21,7 @@
         }
 
         .filters {
-            margin-top: 3rem;
+            margin-top: 1rem;
             & > :not(:last-child) {
                 margin-right: .8rem;
             }
@@ -28,6 +29,19 @@
 
         .recent-chats {
             margin-top: 2rem;
+            display: grid;
+            row-gap: .7rem;
+
+            .chat-activity {
+                display: inline-block;
+                height: 3rem;
+                width: 3rem;
+                border-radius: 5000rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba($col-secondary, .05);
+            }
         }
 
         .report {
@@ -44,6 +58,8 @@
         grid-column: 4/16;
         position: relative;
         padding: 2rem;
+
+        background-color: $col-light-shade-1;
 
         .compose-message {
             z-index: 100;
@@ -74,19 +90,28 @@
 
     &__tools {
         grid-column: 16/-1;
-        background-color: $col-secondary;
-        
         padding: 0 1.5rem;
+
+        background-color: $col-primary;
+        color: $col-accent;
+        color: $col-accent-shade-1;
 
         .tabs {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            margin: 0 -1.5rem;
 
             & > * {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 height: 5rem;
+            }
+
+            .tab {
+                background-color: white;
+                color: $col-primary;
+                border: .1rem solid $col-primary;
             }
         }
 

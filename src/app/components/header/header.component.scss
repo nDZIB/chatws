@@ -1,3 +1,6 @@
+@import "src/app/_partials/variables.scss";
+@import "src/app/_partials/components.scss";
+
 .header {
     display: grid;
     grid-template-columns: repeat(18, 1fr);
@@ -13,7 +16,7 @@
             font-weight: 800;
             font-size: 2rem;
             display: inline-block;
-            margin-left: 1rem;
+            margin-right: .5rem;
         }
     }
 
@@ -58,8 +61,8 @@
             justify-content: center;
             align-items: center;
 
-            background-color: red;
-            color: white;
+            background-color: $col-danger;
+            color: $col-white;
             font-weight: 900;
         }
     }
@@ -71,6 +74,6 @@
         border-radius: 50%;
         align-self: center;
 
-        filter: grayscale(1) saturate(1);
+        filter: saturate(1);
     }
 }

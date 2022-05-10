@@ -1,3 +1,6 @@
+@import "src/app/_partials/variables.scss";
+@import "src/app/_partials/components.scss";
+
 .message {
     display: flex;
 
@@ -9,8 +12,14 @@
     }
 
     .content {
-        padding: 1rem;
+        padding: 1rem 2rem;
         border-radius: 2rem;
+        background-color: $col-white;
+        align-self: flex-start;
+        box-shadow: 0 .01rem .1rem rgba(0, 0, 0, .2);
+        margin: 0 .4rem;
+        max-width: 35%;
+        text-align: justify;
     }
 }
 
@@ -19,6 +28,8 @@
 
     .content {
         order: 0;
+
+        background-color: rgba($col-secondary, .4);
     }
     .sender {
         order: 1;
