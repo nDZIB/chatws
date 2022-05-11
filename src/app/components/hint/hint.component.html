@@ -1,6 +1,8 @@
-<h5>
-    {{title}}
-</h5>
-<p>
-    {{content}}
-</p>
+<div [ngClass]="{'notif': important, 'nnotif': !important}" class="hint">
+    <h5 class="hint_title">
+        {{title}}
+    </h5>
+    <p class="hint_content">
+        <ng-content></ng-content>
+    </p>
+</div>

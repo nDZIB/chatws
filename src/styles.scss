@@ -14,6 +14,26 @@ body {
     font-size: 1.3rem;
 }
 
+// h1 {
+//     font-size: 2rem;
+// }
+
+// h2 {
+//     font-size: 1.8rem;
+// }
+
+// h3 {
+//     font-size: 1.5rem;
+// }
+
+// h4 {
+//     font-size: 1.3rem;
+// }
+
+// h5 {
+//     font-size: 1.4rem;
+// }
+
 .button {
     &, 
     &:active, 
@@ -44,6 +64,15 @@ body {
     outline: none;
     border: 1px solid rgba(230, 230, 230, .9);
     border-radius: 50000px;
+}
+
+.text-input {
+    flex: 0 0 90%;
+    border-radius: 20rem;
+    resize: none;
+    height: 7rem;
+    padding: 1.5rem 3rem;
+    outline: none;
 }
 
 .pointable {

@@ -48,16 +48,18 @@
     </div>
 
     <div class="workspace__area">
-        <h2>Scouting Group</h2>
-        <div>
-            <app-hint [important]="true" title="Welcome to the Streamline scouting chat"
-                content="We can now freely collaborate regarding our current Demand. Any questions about the documentation or the project, please feel free to get in touch with us.">
+        <h2 class="chat-name">Scouting Group</h2>
+        <div class="chat-greeting">
+            <app-hint class="notif" [important]="true" title="Welcome to the Streamline scouting chat">
+                <a href="#">We can now freely collaborate regarding our current Demand</a>
             </app-hint>
         </div>
 
-        <p>
-            Tuesday May 2nd 2022
-        </p>
+        <div class="date">
+            <app-hint title="">
+                Tuesday May 2nd 2022
+            </app-hint>
+        </div>
 
         <div>
             <app-message content="What are words that we cannot use them. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur asperiores, a odio ducimus possimus explicabo repellendus sequi dolore. Fugiat id cupiditate corporis similique ex dolorem unde molestiae rem consequuntur facere!" sender="/assets/images/indira.jpeg">
@@ -76,7 +78,7 @@
 
             <textarea class="text-input" type="text"></textarea>
 
-            <button class="button send" type="submit">
+            <button class="button button--rounded send" type="submit">
                 <app-icon name="icon-location-current"></app-icon>
             </button>
         </form>
