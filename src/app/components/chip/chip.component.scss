@@ -5,7 +5,10 @@
     padding: .1rem 1.5rem;
     border-radius: 50rem;
 
-    box-shadow: 0 .1rem .1rem $col-secondary;
+    box-shadow: 0 .1rem .1rem currentColor;
+
+    background-color: white;
+    color: $col-primary;
 
     &:hover {
         transform: translateY(.2rem);

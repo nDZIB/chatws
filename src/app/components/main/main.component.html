@@ -4,7 +4,7 @@
             <h3>Chats</h3>
 
             <div>
-                <button *ngIf="false" class="button">
+                <button class="button">
                     <app-icon name="icon-search"></app-icon>
                 </button>
                 <button class="button">
@@ -22,12 +22,13 @@
         </div>
 
         <div class="recent-chats">
-            <app-card1 class="chat" *ngFor="let c of chats" [thumbnails]="c.thumbnails" [subt]="c.subt"
-                [title]="c.title">
-                <span class="chat-activity">
-                    {{c.eta}}
-                </span>
-            </app-card1>
+            <div class="chat" *ngFor="let c of chats">
+                <app-card1 [thumbnails]="c.thumbnails" [subt]="c.subt" [title]="c.title">
+                    <span class="chat-activity">
+                        {{c.eta}}
+                    </span>
+                </app-card1>
+            </div>
         </div>
 
         <hr>
