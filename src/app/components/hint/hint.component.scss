@@ -23,12 +23,13 @@
     }
 
     &_title {
-       margin-bottom: 1rem;
+       margin-bottom: .5rem;
        font-size: 1.5rem;
        font-weight: 100;
+       color: inherit;
     }
 
     &_content {
-        color: $col-gray-shade-1;
+        color: rgba($col-primary, .7);
     }
 }

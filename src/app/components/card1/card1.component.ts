@@ -10,11 +10,15 @@ export class Card1Component implements OnInit {
   @Input() title: string = '';
   @Input() subt: string = '';
   @Input() thumbnails: string[] = []
+  @Input() bg = '';
+  @Input() color = '$col-primary';
 
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.bg);
+    
   }
 
 }

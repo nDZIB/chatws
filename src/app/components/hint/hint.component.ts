@@ -7,7 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HintComponent implements OnInit {
   @Input() title: string = '';
-  @Input() content: string = '';
   @Input() important: boolean = false;
 
   constructor() { }

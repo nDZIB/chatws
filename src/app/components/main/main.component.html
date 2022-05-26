@@ -22,24 +22,15 @@
         </div>
 
         <div class="recent-chats">
-            <app-card1 [thumbnails]="['/assets/images/user.jpeg', '/assets/images/indira.jpeg']"
-                subt="You: UX Consulting" title="Leslie Laurens">
+            <app-card1 class="chat" *ngFor="let c of chats" [thumbnails]="c.thumbnails" [subt]="c.subt"
+                [title]="c.title">
                 <span class="chat-activity">
-                    12m
-                </span>
-            </app-card1>
-            <app-card1 [active]="true" subt="You: UX Consulting" title="Scouting Group">
-                <span class="chat-activity">
-                    3h
-                </span>
-            </app-card1>
-            <app-card1 [thumbnails]="['/assets/images/divina.webp']" subt="Laura: We need UI Designer"
-                title="Leslie Palmier">
-                <span class="chat-activity">
-                    4h
+                    {{c.eta}}
                 </span>
             </app-card1>
         </div>
+
+        <hr>
 
         <div class="report">
             <app-icon name="icon-chart"></app-icon> &nbsp;
@@ -62,25 +53,34 @@
         </div>
 
         <div>
-            <app-message content="What are words that we cannot use them. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur asperiores, a odio ducimus possimus explicabo repellendus sequi dolore. Fugiat id cupiditate corporis similique ex dolorem unde molestiae rem consequuntur facere!" sender="/assets/images/indira.jpeg">
+            <app-message
+                content="What are words that we cannot use them. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur asperiores, a odio ducimus possimus explicabo repellendus sequi dolore. Fugiat id cupiditate corporis similique ex dolorem unde molestiae rem consequuntur facere!"
+                sender="/assets/images/indira.jpeg">
             </app-message>
 
-            
+
             <app-message sender="/assets/images/divina.webp" [byMe]="true" content="Hello everyone"></app-message>
             <app-message sender="/assets/images/user.jpeg" content="How are you today?"></app-message>
         </div>
 
         <form class="compose-message" action="#">
+            <div class="part">
+                <button class="button attach" type="button">
+                    <app-icon name="icon-attachment"></app-icon>
+                </button>
+            </div>
 
-            <button class="button attach" type="button">
-                <app-icon name="icon-attachment"></app-icon>
-            </button>
+            <div class="main-part">
+                <textarea class="text-input" type="text">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nihil sunt voluptate libero eaque eveniet quia voluptas veritatis veniam voluptatum molestias quas beatae, reprehenderit voluptates delectus numquam, cumque impedit corrupti.
+                </textarea>
+            </div>
 
-            <textarea class="text-input" type="text"></textarea>
-
-            <button class="button button--rounded send" type="submit">
-                <app-icon name="icon-location-current"></app-icon>
-            </button>
+            <div class="part">
+                <button class="button button--rounded send" type="submit">
+                    <app-icon name="icon-location-current"></app-icon>
+                </button>
+            </div>
         </form>
     </div>
 
@@ -91,31 +91,23 @@
         </div>
 
         <div class="participants">
-            <h5>{{'members' | uppercase}}</h5>
+            <h4 class="heading--4">{{'admins' | uppercase}}</h4>
 
-            <div class="members">
-                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="les.laura#5145" title="Leslie Laurens">
-                    <button class="button button--rounded">
-                        <app-icon name="icon-conversation"></app-icon>
-                    </button>
-                </app-card1>
-                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="les.laura#56458" title="Leslie Laurens">
-                    <button class="button button--rounded">
+            <div class="admins">
+                <app-card1 class="participant" *ngFor="let m of admins" bg="gainsboro" [thumbnails]="[m.avatar]"
+                    [subt]="m.id" [title]="m.name">
+                    <button *ngIf="m.online" class="button button--rounded">
                         <app-icon name="icon-conversation"></app-icon>
                     </button>
                 </app-card1>
             </div>
 
-            <h5>{{'members' | uppercase}}</h5>
+            <h4 class="heading--4">{{'members' | uppercase}}</h4>
 
-            <div class="admins">
-                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="les.laura#564890" title="Leslie Laurens">
-                    <button class="button button--rounded">
-                        <app-icon name="icon-conversation"></app-icon>
-                    </button>
-                </app-card1>
-                <app-card1 [thumbnails]="['/assets/images/user.jpeg']" subt="les.laura#5646" title="Leslie Laurens">
-                    <button class="button button--rounded">
+            <div class="members">
+                <app-card1 class="participant" *ngFor="let m of members" [thumbnails]="[m.avatar]" [subt]="m.id"
+                    [title]="m.name">
+                    <button *ngIf="m.online" class="button button--rounded">
                         <app-icon name="icon-conversation"></app-icon>
                     </button>
                 </app-card1>
@@ -123,9 +115,13 @@
         </div>
 
         <div>
-            <app-hint title="Customize Chat" content="Change layout and colors"></app-hint>
+            <app-hint title="Customize Chat">
+                {{'Change layout and colors'}}
+            </app-hint>
             <br>
-            <app-hint title="Privacy Settings" content="Get immediate support"></app-hint>
+            <app-hint title="Privacy Settings">
+                {{'Change who can invite you to chats'}}
+            </app-hint>
         </div>
     </aside>
 </div>

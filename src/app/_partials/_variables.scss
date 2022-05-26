@@ -1,6 +1,7 @@
 $col-primary: #300053;
 $col-secondary: #8e7fff;
 $col-secondary-shade-1: #cccccc;
+$col-secondary-shade-2: lighten($col-primary, 10);
 
 $col-accent: gold;
 $col-accent-shade-1: #FFD700;
@@ -11,3 +12,8 @@ $col-gray-shade-1: 	#bbbbbb;
 
 $col-white: #ffffff;
 $col-light-shade-1: #f5f5f5;
+
+$shadow-1: .1rem .1rem .1rem rgba($col-primary, .1), 
+-.1rem -.1rem .1rem rgba($col-primary, .1), 
+-.1rem .1rem .1rem rgba($col-primary, .1), 
+.1rem -.1rem .1rem rgba($col-primary, .1);

@@ -68,10 +68,9 @@ body {
 
 .text-input {
     flex: 0 0 90%;
-    border-radius: 20rem;
+    border-radius: inherit;
     resize: none;
-    height: 7rem;
-    padding: 1.5rem 3rem;
+    padding: 1rem;
     outline: none;
 }
 

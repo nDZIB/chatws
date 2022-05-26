@@ -16,21 +16,19 @@
     display: grid;
 
     grid-template-rows: min-content 94vh;
-    grid-template-columns: 4vw [side-bar-end main-start] 1fr repeat(16, [col-start] minmax(min-content, 1fr) [col-end]) 1fr;
+    grid-template-columns: 1vw [side-bar-end main-start] 1fr repeat(16, [col-start] minmax(min-content, 1fr) [col-end]) 1fr [main-content-end] 1vw;
+
+    & > * {
+        box-shadow: $shadow-1;
+    }
 
     &__header {
         background-color: $col-white;
-        grid-column: side-bar-end / -1;
-    }
-
-    &__sidebar {
-        background-color: $col-primary;
-        grid-column: 1 / side-bar-end;
-        grid-row: 1 / -1;
+        grid-column: side-bar-end / main-content-end;
+        padding: .2rem;
     }
 
     &__main {
-        background-color: $col-light-shade-1;
-        grid-column: side-bar-end / -1;
+        grid-column: side-bar-end / main-content-end;
     }
 }
